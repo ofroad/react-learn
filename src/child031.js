@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class ChildTwo extends Component { 
+class ChildTwo extends Component {
+  // 子组件声明自己要使用context
+  static contextTypes = {
+      name: PropTypes.string
+  }
+  static propTypes = {
+        
+  }
   render() {
     return (
       <div>
@@ -11,9 +18,9 @@ class ChildTwo extends Component {
     );
   }
 }
-
+/*
 ChildTwo.contextTypes = {
   name: PropTypes.string
 };
-
+*/
 export default ChildTwo; 

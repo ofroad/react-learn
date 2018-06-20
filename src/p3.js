@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {Link } from "react-router-dom";
+//import {Link } from "react-router-dom";
+import Childlinks from "./childlink";
 import PropTypes from 'prop-types';
 import ChildOne from "./child03";
 import './App.css';
@@ -11,7 +12,11 @@ class p3 extends Component {
       name: ""
     };
   }
-
+  // 父组件声明自己支持context
+  static childContextTypes = {
+      name: PropTypes.string
+  }
+  // 提供一个函数,用来返回相应的context对象
   getChildContext() {
     return {name: this.state.name};
   }
@@ -43,10 +48,9 @@ class p3 extends Component {
       <p>p3 page====父组件向孙子组件通信</p>
 	  <div>也可以叫跨级组件通信，使用context来实现；</div>
 	  <div>用户名：<input type="text" onChange={this.onChangeName}/></div>
+	  <br /><br /><br />
       <ChildOne childCont={this.changeChildCont} />
-	  <Link to="/">to p1</Link><br />
-	  <Link to="/p2">to p2</Link><br />
-	  <Link to="/p3">to p3</Link>
+	  <Childlinks />
       </div>
     );
   }
@@ -59,7 +63,9 @@ class p3 extends Component {
 	  console.log(this)
   }
 }
+/*
 p3.childContextTypes = {
   name: PropTypes.string
 };
+*/
 export default p3;

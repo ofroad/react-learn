@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {Link } from "react-router-dom";
+//import {Link } from "react-router-dom";
+import Childlinks from "./childlink";
 import Child from "./child02";
 import './App.css';
 
@@ -39,10 +40,9 @@ class p2 extends Component {
 	  <div>利用自定义事件，进行回调。</div>
 	  <div>父组件</div>
       <div>职位：{this.state.post}</div>
+	  <br /><br /><br />
       <Child childCont={this.changeChildCont} />
-	  <Link to="/">to p1</Link><br />
-	  <Link to="/p2">to p2</Link><br />
-	  <Link to="/p3">to p3</Link>
+	  <Childlinks />
       </div>
     );
   }
