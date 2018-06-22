@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 import ChildOne from "./child03";
 import './App.css';
 
+console.log("p3")
+
 class p3 extends Component {
   constructor() {
     super();

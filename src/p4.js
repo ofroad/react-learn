@@ -6,7 +6,7 @@ import Childb from "./child042";
 import Emmiter from './bus'
 import './App.css';
 
-console.log(Emmiter)
+console.log("5234")
 
 
 class p4 extends Component {
