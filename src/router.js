@@ -12,6 +12,8 @@ import P8 from './p8';
 import P9 from './p9';
 import P10 from './p10';
 import P11 from './p11';
+import P12 from './p12';
+import P13 from './p13';
 import NotFound from './p404';
 
 console.log(new P7());
@@ -31,6 +33,8 @@ const MainRoute = () => (
 		<Route path="/p9" component={P9} />
 		<Route path="/p10" component={P10} />
 		<Route path="/p11" component={P11} />
+		<Route path="/p12" component={P12} />
+		<Route path="/p13" component={P13} />
 		<Route component={NotFound}/>
 	  </Switch>
   </HashRouter>
