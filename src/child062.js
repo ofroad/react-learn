@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {Datacontext} from "./datacontext";
+console.log("Datacontext===",Datacontext)
+
 
 export default class Child extends Component {
   handleChange = e => {

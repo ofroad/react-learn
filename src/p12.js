@@ -28,11 +28,13 @@ class p12 extends React.Component {
 	  //console.log(this)
   }
   render() {
+	/*
 	const kk = [1, 2, 3, 4, 5];
 	const postdata = [
 	  {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
 	  {id: 2, title: 'Installation', content: 'You can install React from npm.'}
 	];
+   */
     return (
       <div>
 		<h1>ref---字符串</h1>
@@ -44,7 +46,7 @@ class p12 extends React.Component {
     );
   }
   componentDidMount(){
-	  var that=this;
+	  //var that=this;
 	  console.log("=========p12 componentDidMount=============");
 	  console.log(this.refs.links);
 	  console.log(this.refs.name.nodeName);
@@ -53,7 +55,7 @@ class p12 extends React.Component {
 	  this.age.focus();
   }
   componentWillUnmount(){
-	  var that=this;
+	  //var that=this;
 	  console.log("=========p12 componentWillUnmount=============");
 	  //console.log(this);
   }

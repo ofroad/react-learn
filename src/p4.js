@@ -6,7 +6,7 @@ import Childb from "./child042";
 import Emmiter from './bus'
 import './App.css';
 
-console.log("5234")
+//console.log("5234")
 
 
 class p4 extends Component {
@@ -58,7 +58,8 @@ class p4 extends Component {
     );
   }
   showmsg(message,emi){
-	  console.log("========================我是来自触发传递的数据=========================",message);
+    console.log("========================我是来自触发传递的数据=========================",message);
+    console.log("this===",this)
 	  console.log(Emmiter===emi)
   }
   componentDidMount(){

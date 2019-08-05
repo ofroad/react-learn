@@ -17,7 +17,7 @@ import P13 from './p13';
 import NotFound from './p404';
 
 console.log(new P7());
-new P7().www();
+//new P7().www();
  
 const MainRoute = () => (
   <HashRouter>

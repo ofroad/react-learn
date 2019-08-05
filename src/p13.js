@@ -32,12 +32,14 @@ class p13 extends React.Component {
 	  //console.log(this)
   }
   render() {
+	/*
 	const kk = [1, 2, 3, 4, 5];
 	const postdata = [
 	  {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
 	  {id: 2, title: 'Installation', content: 'You can install React from npm.'}
 	];
-	
+	*/
+
 	//似乎不好在class组件 Child01302中定义
 	const MyButton = React.forwardRef((props, ref) => (
 	  <p ref={ref}>
@@ -57,7 +59,7 @@ class p13 extends React.Component {
     );
   }
   componentDidMount(){
-	  var that=this;
+	  //var that=this;
 	  console.log("=========p13 componentDidMount=============");
 	  console.log(this);
 	  //通过current访问dom
@@ -70,7 +72,7 @@ class p13 extends React.Component {
 	  console.log(this.child02.current.innerHTML);
   }
   componentWillUnmount(){
-	  var that=this;
+	  //var that=this;
 	  console.log("=========p13 componentWillUnmount=============");
 	  //console.log(this);
   }

@@ -18,6 +18,8 @@ class ChildTwo extends Component {
     );
   }
 }
+
+//子组件声明自己要使用context----也可以这样声明
 /*
 ChildTwo.contextTypes = {
   name: PropTypes.string

@@ -2,7 +2,7 @@ import React from 'react';
 import Childlinks from "./childlink";
 import './App.css';
 
-console.log(React)
+//console.log(React)
 //react中this的相关用法
 class p7 extends React.Component {
   constructor(props) {
@@ -17,17 +17,17 @@ class p7 extends React.Component {
 	  name:"qq"
   }
   ww4(){
-	  
+	console.log(this);
   }
   handleClick() {
 	  //原型方法
-	 //console.log(this);
-	 alert(this);
-	
+	 console.log(this);
+	 //alert(this);
+	/*
     this.setState(prevState => ({
       isToggleOn: !prevState.isToggleOn
     }));
-	
+	*/
   }
   www(){
 	  /*
@@ -60,12 +60,19 @@ class p7 extends React.Component {
 		  <button onClick={this.handleClick}>
 			{this.state.isToggleOn ? 'ON' : 'OFF'}
 		  </button>
-		  <span onClick={this.www}>525234523452345</span>
-		  <p onClick={this.changeChildCont}>525234523452345</p>
-		  <p onClick={(e) => this.ww3("123",e)}>525234523452345</p>
+		  <span onClick={this.www}>111111111111</span>
+		  <p onClick={this.ww4}>555555555555555</p>
+		  <p onClick={this.changeChildCont}>222222222222222</p>
+		  <p onClick={(e) => this.ww3("123",e)}>333333333333333</p>
 		  <Childlinks />
 	  </div>
     );
+  }
+  componentDidMount(){
+	console.log("=========p7 componentDidMount=============");
+	console.log(this)
+	//此时handleClick里面的this指向的才是组件实例
+	this.handleClick()
   }
 }
 export default p7;

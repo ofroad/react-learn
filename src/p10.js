@@ -8,14 +8,15 @@ console.log(React);
 class p10 extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {showWarning: true};
+    this.state = {showWarning: true,age:110};
     this.handleToggleClick = this.handleToggleClick.bind(this);
   }
 
   handleToggleClick() {
-    this.setState(prevState => ({
-      showWarning: !prevState.showWarning
-    }));
+    this.setState(prevState => {
+      console.log("prevState===",prevState)
+      return {showWarning: !prevState.showWarning}
+    });
   }
 
   render() {
