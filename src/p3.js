@@ -14,11 +14,11 @@ class p3 extends Component {
       name: ""
     };
   }
-  // 父组件声明自己支持context
+  // 父组件声明自己支持context，“childContextTypes”写法固定
   static childContextTypes = {
       name: PropTypes.string
   }
-  // 提供一个函数,用来返回相应的context对象
+  // 提供一个函数,用来返回相应的context对象，“getChildContext”写法固定
   getChildContext() {
     return {name: this.state.name};
   }

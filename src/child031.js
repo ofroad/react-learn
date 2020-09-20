@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class ChildTwo extends Component {
-  // 子组件声明自己要使用context
+  // 子组件声明自己要使用context,"contextTypes"写法固定
   static contextTypes = {
       name: PropTypes.string
   }
